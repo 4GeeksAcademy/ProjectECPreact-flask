@@ -17,8 +17,8 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
-
-class Gender2(db.Model):
+    
+class Gender(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String(250), nullable=False)
        
