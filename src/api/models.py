@@ -17,3 +17,16 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+
+class Gender(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(db.String(250), nullable=False)
+       
+    def __repr__(self):
+        return '<Gender %r>' % self.type
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "type": self.type,
+        }
