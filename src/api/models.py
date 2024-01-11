@@ -18,7 +18,7 @@ class User(db.Model):
             # do not serialize the password, its a security breach
         }
 
-class Gender2(db.Model):
+class Gender_simple_cambio(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String(250), nullable=False)
        
