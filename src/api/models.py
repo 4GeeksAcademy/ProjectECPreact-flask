@@ -31,3 +31,16 @@ class Videogame(db.Model):
             "pegi": self.pegi,
             "year": self.year
         }
+    
+class Gender(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(db.String(250), nullable=False)
+       
+    def __repr__(self):
+        return '<Gender %r>' % self.type
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "type": self.type,
+        }
